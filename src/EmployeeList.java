@@ -67,18 +67,12 @@ public class EmployeeList {
         System.out.println("Сотрудник с наибольшей зарплатой за месяц - " + this.employee[target].getNameEmployee());
     }
     public double averageSalaryForMonth(Employee[] employee) {
-        double i;
-
-        i = allSalaryForMonth(getEmployee()) / this.employee.length;
-        return i;
+        return  allSalaryForMonth(getEmployee()) / this.employee.length;
     }
 
     public void nameEmployees(Employee[] employee) {
         System.out.println("Список сотрудников:");
         for (int i = 1; i < this.employee.length + 1; i++) {
-            if (employee == null) {
-                continue;
-            }
             System.out.println(i + ") " + this.employee[i - 1].getNameEmployee());
         }
     }

@@ -3,7 +3,8 @@ public class Employee {
     private String nameEmployee;
     private int numberOfDepartment;
     private int salary;
-    static int counter = 1;
+    private static int counter = 1;
+
     private int id;
 
 

@@ -13,6 +13,5 @@ public class Main {
         System.out.println("Среднее зарплат всех сотрудников = " + employeeList.averageSalaryForMonth(employeeList.getEmployee()));
         employeeList.nameEmployees(employeeList.getEmployee());
 
-
     }
 }

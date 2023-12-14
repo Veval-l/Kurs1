@@ -15,6 +15,7 @@ public class EmployeeList {
         employee[8] = new Employee("Павлов Павел Павлович", 4, 90000);
         employee[9] = new Employee("Сергеев Сергей Сергеевич", 5, 95000);
     }
+
     public Employee[] getEmployee() {
         return employee;
     }
@@ -28,15 +29,17 @@ public class EmployeeList {
 
         }
     }
+
     public double allSalaryForMonth(Employee[] employee) {
         double sum = 0;
         for (Employee value : this.employee) {
-            if(value != null) {
+            if (value != null) {
                 sum += value.getSalary();
             }
         }
         return sum;
     }
+
     public void minSalary(Employee[] employee) {
         double minSalary = Integer.MAX_VALUE;
         int target = 0;
@@ -66,14 +69,17 @@ public class EmployeeList {
         }
         System.out.println("Сотрудник с наибольшей зарплатой за месяц - " + this.employee[target].getNameEmployee());
     }
+
     public double averageSalaryForMonth(Employee[] employee) {
-        return  allSalaryForMonth(getEmployee()) / this.employee.length;
+        return allSalaryForMonth(getEmployee()) / this.employee.length;
     }
 
     public void nameEmployees(Employee[] employee) {
         System.out.println("Список сотрудников:");
-        for (int i = 1; i < this.employee.length + 1; i++) {
-            System.out.println(i + ") " + this.employee[i - 1].getNameEmployee());
+        for (Employee employee : employee) {
+            if (employee != null) {
+                System.out.println(employee.getNameEmployee());
+            }
         }
     }
 }

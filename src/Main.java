@@ -1,27 +1,17 @@
+import java.sql.SQLOutput;
+
 public class Main {
+
     public static void main(String[] args) {
 
-        task1();
+        EmployeeList employeeList = new EmployeeList();
+
+        employeeList.printAllEmployees();
+        System.out.println("Месячная выплата всем сотрудникам = " + employeeList.allSalaryForMonth(employeeList.getEmployee()));
+        employeeList.minSalary(employeeList.getEmployee());
+        employeeList.maxSalary(employeeList.getEmployee());
+        System.out.println("Среднее зарплат всех сотрудников = " + employeeList.averageSalaryForMonth(employeeList.getEmployee()));
+        employeeList.nameEmployees(employeeList.getEmployee());
 
     }
-    static public void task1() {
-        /**
-         Напишите программу, которая занимается учетом сотрудников и помогает кадрам и бухгалтерии автоматизировать процессы.
-         С помощью вашей программы бухгалтерия и отдел кадров смогут узнавать следующую информацию:
-
-         1. Получить список всех сотрудников.
-         2. Посчитать сумму затрат на зарплаты.
-         3. Найти сотрудника с минимальной заплатой.
-         4. Найти сотрудника с максимальной зарплатой.
-         5. Подсчитать среднее значение зарплат.
-         */
-        System.out.println("Задача 1");
-
-
-
-        System.out.println( );
-    }
-
-
-
 }
